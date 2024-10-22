@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:stacked_state_management_demo/app/app.locator.dart';
 import 'package:stacked_state_management_demo/screens/home/home.dart';
 
-void main() {
+void main() async {
+  await setupLocator();
   runApp(const MyApp());
 }
 

@@ -34,11 +34,12 @@ class HomeView extends StatelessWidget {
                     child: Text("Add")),
                 const SizedBox(height: 10),
                 ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
+                    onPressed: () async {
+                      await Navigator.push(
                           context,
                           MaterialPageRoute(
                               builder: (context) => const ProfileView()));
+                      viewModel.rebuildUi();
                     },
                     child: Text("Go to Profile Screen")),
               ],
